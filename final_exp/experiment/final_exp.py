@@ -21,9 +21,7 @@ expInfo = {"subject": "0"}
 subjectN = expInfo["subject"]
 dlg = gui.DlgFromDict(expInfo, title="Two-armed bandit task XBOX")
 fileName = "XBox_rumblePress_" + expInfo["subject"] + "_" + data.getDateStr()
-dataFile = open(
-    fileName + ".csv", "w"
-)  # a simple text file with 'comma-separated-values'
+dataFile = open(fileName + ".csv", "w")  # a simple text file with 'comma-separated-values'
 dataFile.write("subject, block, trial, offer_right, offer_left, exp_value_right, exp_value_left, key, key_ID, chosen_card, unchosen_card, rt, reward\n")
 
 ##Initializing game
@@ -198,7 +196,7 @@ def main():
                 if events.button == 0:
                     break
 
-def mainExperimentModes(dataFile, subjectN, win, lsl_outlet,i):
+def mainExperimentModes(dataFile, subjectN, win, lsl_outlet, i):
     picList = ['1.png', '2.png']
     current_RW = RW_100
     # Initilizing Game
